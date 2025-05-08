@@ -1,0 +1,276 @@
+.footer {
+    background-color: var(--Secondary-color);
+    display: flex;         
+    align-items: center;  
+    justify-content: center; 
+    gap: 50px;   
+    font-family: var(--Font-family);  
+    padding: 80px 40px;      
+  }
+  /* search */
+  .left {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 100px;
+    gap: 20px;
+    width: 400px;
+  }
+  .left img {
+    width: 50px;
+    height: auto;
+  }
+  
+  .fill {
+    position: relative;
+    width: 300px;  
+    border-radius: 20px;
+    margin-top: 20px;
+  }
+  
+  #text {
+    width: 340px;
+    height: 60px;  
+    padding: 10px;
+    color: var(--White-color);
+    border-radius: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+  }
+  
+  .btn {
+    position: absolute;
+    right: -35px;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 10px 16px;
+    background-color: var(--Secondary-color);/* Button color */
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+  }
+.btn:hover{
+    background-color: var(--Primary-color);
+    color: var(--White-color);
+}
+/* right footer */
+.right{
+    display: flex;
+    flex-direction: row;
+    padding:10px 10px;
+    gap: 80px;
+}
+/* for company */
+.company{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.company h2{
+    color: var(--Heading-color);
+    font-size: var(--Subheading-size);
+}
+.company nav{
+    color: var(--Heading-color);
+    font-size: var(--Subheading-size);
+    cursor: pointer;
+}
+.company nav:hover{
+    color: var(--Primary-color);
+}
+
+/* for service footer */
+.service{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 130px;
+}
+.service h2{
+    color: var(--Heading-color);
+    font-size: var(--Subheading-size);
+}
+.service nav{
+    color: var(--Heading-color);
+    font-size: var(--Subheading-size);
+    cursor: pointer;
+}
+.service nav:hover{
+    color: var(--Primary-color);
+}
+/* contact */
+.Contact{
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    
+}
+.Contact h2{
+    font-size: var(--Subheading-size);
+    color: var(--Heading-color);
+}
+.location,
+.number,
+ .email{
+    display: flex;
+    align-items: center;
+    gap:8px;
+    font-size: var(--Subheading-size);
+    height: 50px;
+}
+i{
+    font-size: var(--Subheading-size);
+    color: var(--Heading-color);
+}
+i:hover{
+    color: var(--Primary-color);
+}
+.Contact p,
+.number p,
+.email p{
+    margin-top: 15px;
+}
+
+/* social media */
+.social{
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    margin-top: 50px;
+}
+.social i{
+    font-size: var(--Heading-size);
+}
+
+/* Copywrites */
+.copywrite {    
+    margin-top: -50px;
+text-align: center;
+ font-size: var(--Subheading-size);
+  color: var(--Primary-color);
+  
+}
+.copywrite a{
+    text-decoration: none ;
+}
+
+/* Extra small devices (phones, less than 576px) */
+@media (max-width: 575.98px) {
+    .footer{
+        gap: 40px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .left{
+        width: 400px;
+        height: 60px;
+        gap: 8px;
+        display: flex;
+        align-items: center;
+    }
+    .left img{
+        width: 60px;
+        height: auto;
+
+    }
+    .fill{
+        position: relative;
+        width: 50px;
+        border-radius: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    #text{
+        width: 300px;
+        height: 50px;
+        font-size: var(--Mobile-size);
+    }
+    .btn{
+        position: absolute;
+        right: -120px;
+        padding: 10px 12px;
+        cursor: pointer;
+    }
+    /* right */
+    .right{
+        display: flex;
+        flex-direction: column;
+        gap: 18px;
+        align-items: center;
+    }
+    .company,
+    .service,
+    .Contact{
+        gap:8px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+.company h2,
+.service h2,
+.Contact h2 {
+    font-size: var(--Mobile-heading); 
+}
+    .company nav,
+    .service nav{
+        font-size: var(--Mobile-subheading);
+        align-items: center;
+    }
+    .Contact{
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+    }
+    .location,
+    .number,
+    .email{
+        gap: 8px;
+        font-size: var(--Mobile-subheading);
+        display: flex;
+        flex-direction: column;
+        height: auto;
+    }
+    .Contact i{
+        font-size: var(--Mobile-heading);
+    }
+    .social{
+        display: flex;
+        flex-direction: row;
+        gap: 20px;
+        padding-top: 8px;
+    }
+    .social i{
+        font-size: var(--Mobile-heading);
+    }
+    .copywrite{
+        margin-top: -20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 50px;
+        text-align: center;
+        font-size: var(--Mobile-subheading);
+        background-color: var(--Secondary-color);
+        border-top: 1px solid var(--White-color);
+    }
+    .copywrite a{
+        text-decoration: none;
+    }
+  }
+
+/* Small devices (phones, 576px and up) */
+@media (min-width: 576px) and (max-width: 767.98px) {  }
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) and (max-width: 991.98px) {  }
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) and (max-width: 1199.98px) {  }
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) and (max-width: 1399.98px) {  }
+
+/* Extra extra large devices (very large screens, 1400px and up) */
+@media (min-width: 1400px) {  }

@@ -1,0 +1,148 @@
+.discounts{
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    padding: 80px 40px;
+    justify-content: center;
+}
+.header{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    width: 622px;
+}
+.header h2{
+    font-size: var(--body-size);
+    color: var(--SubHeading-color);
+    margin-bottom: -20px
+}
+.header h1{
+    font-size: var(--Heading-size);
+    color: var(--Heading-color);
+    margin-bottom: -20px;
+}
+
+.header p{
+    font-size: var(--body-size);
+    color: var(--SubHeading-color);
+    margin-bottom: -20px;
+}
+/* card */
+.content{
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+    margin-bottom: -25px;
+    border-radius: 0px;
+}
+span{
+    color: var(--Primary-color);
+}
+
+.card h1,
+.card2 h1,
+.card3 h1{
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+    font-size: var(--Heading-size);
+    color: var(--Heading-color);
+}
+.data{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+.data p{
+    font-size: var(--Heading-size);
+    color: var(--SubHeading-color);
+    margin-bottom: -25px;
+}
+.card,
+.card2,
+.card3{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    padding: 10px 10px;
+    background-color: var(--Card-hover);
+    width: 140px;
+    height: 490px;
+    border-radius: 20px;
+    border: none;
+}
+.active-card{
+    width: 1000px;
+    height: 490px;
+}
+
+/* responsive */
+@media (max-width: 575.98px) {
+    .discounts{
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+        padding: 52px 20px;
+        justify-content: center;
+        height: 400px;
+    }
+    .header{
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        width: 400px;
+        text-align: center;
+    }
+    .header h2{
+        font-size: var(--Mobile-body);    
+    }
+    .header h1{
+        font-size: var(--Mobile-heading);
+    }
+  .header p{
+    font-size: var(--Mobile-body);
+  }
+  /* card */
+  .content{
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+    margin-bottom: -25px;
+  }
+  span{
+    color: var(--Primary-color);
+  }
+  .card h1,
+  .card2 h1,
+  .card3 h1{
+    writing-mode: vertical-lr;
+    transform: rotate(180deg);
+    font-size: var(--Mobile-heading);
+  }
+  .data{
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+    }
+    .data p{
+        font-size: var(--Mobile-body);
+    }
+    .card,
+    .card2,
+    .card3{
+        display: flex;
+        flex-direction: row;
+        gap:0px;
+        padding: 8px 8px;
+        width:40px;
+        height: 231px;
+        border-radius: 0px;
+        border: none;
+        justify-content: center;
+        border-radius: 10px;
+        transition: all 0.5ms ease-in;
+    }
+    .active-card{
+        width: 329px;
+        height: 231px;
+    }
+}

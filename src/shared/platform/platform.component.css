@@ -1,0 +1,111 @@
+.platform{
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    padding: 80px 4%;
+    justify-content: center;
+}
+
+h1{
+    font-size: var(--Heading-size);
+    color: var(--Heading-color);
+   
+}
+p{
+    font-size: var(--body-size);
+    color: var(--SubHeading-color);
+}
+.header{
+    display: flex;
+    flex-direction: column;
+    width: 622px;
+    height: 150px;
+}
+/* content */
+.content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+  }
+.ios{
+    display: flex;
+    flex-direction: column;
+    width: 254px;
+    height: 150px;
+    justify-content: center;
+    align-items: center;
+    color: var(--White-color);
+    border-radius: 10px;
+    border:none;
+    padding: 20px 20px;
+    gap: 20px;
+    text-align: center;
+}
+.ios img{
+    width: 47px;
+    height: 56px;
+}
+.ios h1{
+    font-size: var(--Subheading-size);
+    color: var(--Heading-color);
+    width: 240px;
+    height: 60px;
+    text-align: center;
+}
+.ios:hover{
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+@media (max-width: 575.98px) { 
+    .platform{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        padding: 52px 20px;
+        justify-content: center;
+        align-items: center;
+    }
+    h1{
+        font-size: var(--Mobile-heading);
+    }
+    p{
+        font-size: var(--Mobile-body);
+    }
+    .header{
+        display: flex;
+        flex-direction: column;
+        width: 350px;
+        text-align: center;
+        gap: 8px;
+    }
+    /* content */
+    .content{
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        padding: 10px;
+        
+      
+    }
+    .ios{
+        display: flex;
+        flex-direction: column;
+        width: calc(48% - 20px);
+        justify-content: center;
+        align-items: center;
+        padding: 8px 8px;
+        gap: 10px;
+        text-align: center;
+    }
+    .ios img{
+        width: 30px;
+        height: 36px;
+    }
+    .ios h1{
+        font-size: var(--Mobile-body);
+        width: 151px;
+        height: 40px;
+        text-align: center;
+    }
+}

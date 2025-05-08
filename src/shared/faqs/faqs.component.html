@@ -1,0 +1,19 @@
+<div class="faqs">
+    <div class="right">
+        <h2>FAQs</h2>
+        <h1>Anything Question? We Got You</h1>
+        <p>Whether it's big or small, your questions matter. We're here with clear answers and real support anytime you need us.</p>
+    </div>
+    <div class="left">
+        <div class="dropdown" *ngFor="let faq of faqs; let i = index">
+            <div class="qn1" (click)="toggleAnswer(i)">
+              <p>{{ faq.question }}</p>
+              <i class="fa-solid" [ngClass]="faq.isVisible ? 'fa-angle-up' : 'fa-angle-down'"></i>
+            </div>
+          
+            <div class="answer" [ngClass]="{ 'show': faq.isVisible }">
+              <p>{{ faq.answer }}</p>
+            </div>
+          </div>
+          </div>
+</div>
