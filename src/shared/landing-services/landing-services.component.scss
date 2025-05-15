@@ -1,0 +1,202 @@
+.services{
+  display: flex;
+  flex-direction: column;
+  padding: 80px 60px;
+  width: 1400px;
+}
+.head{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 20px;
+}
+.left{
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  gap: 15px;
+}
+.left h3{
+  font-size: var(--body-size);
+  color: var(--SubHeading-color);
+}
+.left h1{
+  font-size: var(--Heading-size);
+  color: var(--Heading-color);
+}
+.left p{
+  font-size: var(--body-size);
+  color: var(--SubHeading-color);
+}
+.right{
+  display: flex;
+  justify-content: flex-end;
+}
+.right .btn{
+ padding: 12px 16px;
+ width: 118px;
+ height: 54px;
+ background-color: var(--Secondary-color);
+ color: var(--nav-text-color);
+}
+//.right .btn:hover{
+//  background-color: var(--Primary-color);
+//  color: var(--White-color);
+//}
+/* content */
+.content{
+  display: flex;
+  flex-direction: row;
+  gap: 18px;
+  width: 100%;
+}
+.app-card{
+  width: 100%;
+  display: flex;
+  flex-direction:column;
+  border-radius: 20px;
+  background-color: var(--Card-active);
+  transition: transform .6s ease-in-out;
+  cursor: pointer
+}
+
+.app-card img{
+  height: 230px;
+}
+// .app{
+//   display: flex;
+//   flex-direction: column;
+
+//   border-radius: 20px;
+//   //height: 360px;
+//   background-color: var(--Card-active);
+//   transition: transform 1s ease-in-out;
+// }
+.app:hover, .app-card:hover{
+  background-color: var(--Card-hover);
+
+}
+//.app img{
+//width: 100%;
+//}
+.detail{
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 10px 10px;
+  text-align: center;
+}
+.detail h3{
+  font-size: var(--Subheading-size);
+  color: var(--Heading-color);
+}
+.detail p{
+  font-size: var(--body-size);
+  color: var(--SubHeading-color);
+}
+@media (min-width:600px) and (max-width:1200px) {
+  .services{
+    display: flex;
+    flex-direction: column;
+    padding: 60px 40px;
+    margin-top: 80px;
+    width: 100%;
+    gap: 40px;
+  }
+  .head{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0px;
+    gap: 20px;
+    text-align: center;
+  }
+  .left{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 8px;
+  }
+  .content{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+  }
+  .app-card{
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  .app-card img{
+    height: 250px;
+  }
+}
+@media (max-width:580px) {
+  .services{
+    display: flex;
+    flex-direction: column;
+
+    width: 100%;
+    margin-top: 80px;
+    gap: 20px;
+  }
+  .head{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0px;
+    gap: 20px;
+  }
+  .left{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 8px;
+    text-align: center;
+  }
+  .left h3{
+    font-size: var(--Mobile-body);
+  }
+  .left h1{
+    font-size: var(--Mobile-heading);
+  }
+  .left p{
+    font-size: var(--Mobile-small);
+  }
+  .right .btn{
+    padding: 10px 12px;
+    width: 120px;
+    height: 40px;
+  }
+  .content{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+  }
+  .app-card{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  .app-card-img{
+    // height: 150px;
+  }
+  .detail{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  .detail h3{
+    font-size: var(--Mobile-heading);
+  }
+  .detail p{
+    font-size: var(--Mobile-small);
+  }
+}

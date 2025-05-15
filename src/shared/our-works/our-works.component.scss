@@ -1,0 +1,239 @@
+.works{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 80px 60px;
+  margin-top: 100px;
+  width: 1400px;
+  justify-content: center;
+}
+.head{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 20px;
+}
+.left{
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+}
+.left h1{
+  font-size: var(--Heading-size);
+  color: var(--Heading-color);
+}
+.left p{
+  font-size: var(--body-size);
+  color: var(--SubHeading-color);
+}
+.right{
+  display: flex;
+  gap: 10px;
+}
+.btnl,
+.btnr {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  border: none;
+  background-color: var(--Card-hover);
+  font-size: var(--Subheading-size);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.btnl i,
+.btnr i{
+  font-size: var(--Heading-size);
+}
+/* content */
+.content {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  width: 100%;
+  overflow: hidden;
+  padding: 10px 10px;
+}
+.product1{
+  flex: 0 0 auto;
+  display: flex;
+  flex-direction: column;
+  padding: 30px 30px;
+  width: 28%;
+  height: 440px;
+  align-items: center;
+  gap: 10px;
+  border-radius: 20px;
+  border: none;
+  background-color: var(--Card-active);
+}
+.product1 img{
+  width: 50%;
+  height: 230px;
+  object-fit: contain;
+}
+.data{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  height: auto;
+  gap: 20px;
+}
+.data h1{
+  font-size: var(--Heading-size);
+  color: var(--Heading-color);
+
+}
+.data p{
+  font-size: var(--body-size);
+  color: var(--SubHeading-color);
+}
+.data .comp-btn{
+  padding: 12px 16px;
+  border-radius: 10px;
+  border: none;
+  width: 135px;
+  height: auto;
+  background-color: var(--Secondary-color);
+}
+.data .comp-btn:hover{
+  background-color: var(--Primary-color);
+  color: var(--White-color);
+}
+.data a{
+  text-decoration: none;
+  color: var(--nav-text-color);
+}
+.pagination{
+  display: none;
+}
+@media (min-width:600px) and (max-width:1200px) {
+  .works{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 60px 40px;
+    margin-top: 80px;
+    width: 100%;
+    justify-content: center;
+  }
+  .head{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding:10px 10px;
+
+  }
+  .left{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+  }
+  .btnl,
+  .btnr{
+    width: 60px;
+    height: 60px;
+  }
+  .content{
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+    width: 100%;
+  }
+  .product1{
+    display: flex;
+    flex-direction: column;
+    padding: 20px 20px;
+    width: 29%;
+    height: 350px;
+  }
+  .product1 img{
+    width: 40%;
+    height: 200px;
+  }
+}
+@media (max-width: 580px) {
+  .works{
+    background-color: var(--Card-hover);
+    gap: 20px;
+    width: 100%;
+    margin-top: 40px;
+    overflow: hidden;
+  }
+  .head{
+    display: flex;
+    flex-direction: column;
+    padding: 0px;
+    width: 100%;
+    text-align: center;
+
+  }
+  .left{
+    width: 100%;
+  }
+  .left h1{
+    font-size: var(--Mobile-heading);
+  }
+  .left p{
+    font-size: var(--Mobile-body);
+  }
+  .right{
+    display: none;
+  }
+  /* content */
+  .content{
+    gap: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    overflow:scroll;
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none;
+    width: 100%;
+
+  }
+  .product1{
+    padding: 10px 10px;
+    gap: 8px;
+    border-radius: 10px;
+    background-color: var(--White-color);
+    width: 44%;
+    height: 300px;
+  }
+  .product1 img{
+    width: 50%;
+    height: 120px;
+  }
+  .data{
+    display: flex;
+    gap: 10px;
+    height: 98px;
+  }
+  .data h1{
+    font-size: var(--Mobile-heading);
+  }
+  .data p{
+    font-size: var(--Mobile-small);
+  }
+  .data .btn{
+    padding: 10px 12px;
+  }
+  .pagination{
+    display: flex;
+    flex-direction: row;
+    gap: 4px;
+    justify-content: center;
+  }
+  .pagination i{
+    font-size: var(--Heading-size);
+    cursor: pointer;
+  }
+  .active{
+    color: var(--Primary-color);
+  }
+}

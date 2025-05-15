@@ -1,0 +1,129 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  /* logo on left, nav on right */
+  align-items: center;
+  padding: 5px 30px;
+  background: rgba(243, 243, 243, 0.6);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  max-width: 1200px;
+  margin: auto;
+  border-radius: 10px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+}
+
+.navbar img {
+  width: 235px;
+  /* or whatever size you want */
+  height: auto;
+}
+
+#navitem {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+nav a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.active {
+  color: var(--Primary-color);
+}
+
+#navitem nav {
+  font-size: var(--body-size);
+  color: var(--nav-text-color);
+  cursor: pointer;
+}
+
+#navitem nav:hover {
+  color: var(--Primary-color);
+}
+
+.btn {
+  padding: 8px 16px;
+  border: 2px solid var(--Primary-color);
+  color: var(--nav-text-color);
+  border-radius: 4px;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+
+
+.btn:hover {
+  color: var(--White-color);
+  background-color: var(--Primary-color);
+}
+
+.btn a {
+  text-decoration: none;
+  color: inherit;
+}
+
+#navitem {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  position: relative;
+}
+
+.icon {
+  display: none;
+  // font-size: 24px;
+  color: var(--Primary-color);
+  cursor: pointer;
+}
+
+/* Extra small devices (phones, less than 576px) */
+@media (max-width: 575.98px) {
+  #navitem {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    background: var(--White-color);
+    padding: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    z-index: 999;
+  }
+
+  #navitem.active {
+    display: flex;
+    width: 130px;
+    border-radius: 10px;
+    margin-top: 10px;
+    opacity: 80%;
+  }
+
+  .icon {
+    display: block;
+    color: var(--Heading-color);
+  }
+}
+
+
+
+
+/* Small devices (phones, 576px and up) */
+@media (min-width: 576px) and (max-width: 767.98px) {}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) and (max-width: 991.98px) {}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) and (max-width: 1199.98px) {}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) and (max-width: 1399.98px) {}
+
+/* Extra extra large devices (very large screens, 1400px and up) */
+@media (min-width: 1400px) {}

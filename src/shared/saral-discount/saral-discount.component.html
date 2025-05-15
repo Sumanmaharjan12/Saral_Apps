@@ -1,0 +1,51 @@
+<div class="discounts">
+  <div class="header">
+    <h2>Saral Discounts</h2>
+    <h1>How it Works</h1>
+    <p>
+      We keep things simple and transparent. First, we start by understanding
+      your goals and gathering your requirements.
+    </p>
+  </div>
+  <div class="content">
+    <div
+      class="card"
+      (click)="setSection('corporate')"
+      [ngClass]="{ 'active-card': activeSection === 'corporate' }"
+    >
+      <h1>
+        For
+        <span [class.active]="activeSection === 'corporate'">Cooperate</span>
+      </h1>
+      <div class="data" *ngIf="activeSection === 'corporate'">
+        <p *ngFor="let item of data.corporate">{{ item }}</p>
+      </div>
+    </div>
+    <div
+      class="card2"
+      (click)="setSection('merchant')"
+      [ngClass]="{ 'active-card': activeSection === 'merchant' }"
+    >
+      <h1>
+        For <span [class.active]="activeSection === 'merchant'">Merchant</span>
+      </h1>
+      <div class="data" *ngIf="activeSection === 'merchant'">
+        <p *ngFor="let item of data.merchant">{{ item }}</p>
+      </div>
+    </div>
+
+    <div
+      class="card3"
+      (click)="setSection('employees')"
+      [ngClass]="{ 'active-card': activeSection === 'employees' }"
+    >
+      <h1>
+        For
+        <span [class.active]="activeSection === 'employees'">Employees</span>
+      </h1>
+      <div class="data" *ngIf="activeSection === 'employees'">
+        <p *ngFor="let item of data.employees">{{ item }}</p>
+      </div>
+    </div>
+  </div>
+</div>

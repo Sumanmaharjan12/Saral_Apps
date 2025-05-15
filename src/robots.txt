@@ -1,0 +1,7 @@
+User-agent: *
+Disallow: /assets/
+Disallow: /api/
+Disallow: /admin/
+Allow: /
+
+Sitemap: https://saralapps.com/sitemap.xml

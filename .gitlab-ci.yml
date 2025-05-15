@@ -1,0 +1,66 @@
+stages:
+    - build
+    - deploy
+
+variables:
+    NODE_VERSION: "16"
+
+build:
+    stage: build
+    image: node:${NODE_VERSION}
+    script:
+        - echo "Installing dependencies and building the app..."
+        - npm install --legacy-peer-deps
+        - npm run build -- --configuration=production
+        - echo "Archiving production build..."
+        - tar -czf dist/dist.tar.gz -C dist/saralapps .
+        - ls -alh dist # Debug: List archive to verify it exists
+    artifacts:
+        name: dist
+        paths:
+            - dist/dist.tar.gz
+        expire_in: 1 day
+    only:
+        - main
+
+deploy:
+    stage: deploy
+    image: alpine:latest
+    dependencies:
+        - build
+    before_script:
+        - apk add --no-cache openssh-client
+    script:
+        - echo "Deploying to VPS..."
+        # Debug: print working directory and list files to verify artifact exists
+        - pwd
+        - ls -alh
+        - ls -alh dist
+        # Write the unencrypted (base64-encoded) SSH key to file
+        - echo "$SSH_KEY" > /tmp/deploy_key
+        - chmod 600 /tmp/deploy_key
+        # Copy the archive to the server (ensure the path matches your artifact location)
+        - scp -P $PORT -i /tmp/deploy_key -o StrictHostKeyChecking=no ./dist/dist.tar.gz $USERNAME@$HOST:/home/admin/
+        # SSH into the server and deploy the application
+        - |
+            ssh -p $PORT -i /tmp/deploy_key -o StrictHostKeyChecking=no $USERNAME@$HOST << 'EOF'
+              echo "Starting Deployment Process..."
+              # Remove the existing deployment directory
+              echo "Removing existing files..."
+              sudo rm -rf /var/www/saralapps.com
+              sudo mkdir -p /var/www/saralapps.com
+              # Move the archive to the deployment directory
+              echo "Moving archive to deployment directory..."
+              sudo mv /home/admin/dist.tar.gz /var/www/saralapps.com
+              # Extract the archive into the deployment directory
+              echo "Extracting the archive..."
+              sudo tar -xzf /var/www/saralapps.com/dist.tar.gz -C /var/www/saralapps.com
+              # Cleanup the archive file
+              echo "Cleaning up..."
+              sudo rm /var/www/saralapps.com/dist.tar.gz
+              echo "Deployment completed successfully!"
+            EOF
+        # Cleanup the SSH key from the runner
+        - rm -f /tmp/deploy_key
+    only:
+        - main

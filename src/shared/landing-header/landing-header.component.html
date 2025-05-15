@@ -1,0 +1,22 @@
+<div class="navbar">
+  <a [routerLink]="['/']"><img src="/assets/logo.png" alt="app-logo"></a>
+
+  <div id="navitem" #navitem>
+    <nav><a [routerLink]="['/']" routerLinkActive="active">Home</a></nav>
+    <nav><a [routerLink]="['/about-us']" routerLinkActive="active">About Us</a></nav>
+    <nav><a [routerLink]="['/']" routerLinkActive="active">Portfolio</a></nav>
+    <nav><a [routerLink]="['/career']" routerLinkActive="active">Career</a></nav>
+    <nav><a [routerLink]="['/services']" routerLinkActive="active">Services</a></nav>
+        <button class="btn"><a [routerLink]="['/contact-us']" routerLinkActive="active">Contact</a></button>
+
+
+<!--    <nav><a [routerLink]="['/about-us']" routerLinkActive="active">About Us</a></nav>-->
+<!--    <nav><a [routerLink]="['/portfolio']" routerLinkActive="active">Portfolio</a></nav>-->
+<!--    <nav><a [routerLink]="['/career']" routerLinkActive="active">Career</a></nav>-->
+<!--    <nav><a [routerLink]="['/services']" routerLinkActive="active">Services</a></nav>-->
+<!--    <button class="btn"><a [routerLink]="['/contact']" routerLinkActive="active">Contact</a></button>-->
+  </div>
+  <a href="javascript:void(0);" class="icon" (click)="toggleMenu()">
+    <i class="fa fa-bars"></i>
+  </a>
+</div>

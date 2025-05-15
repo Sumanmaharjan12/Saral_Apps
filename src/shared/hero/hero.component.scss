@@ -1,0 +1,481 @@
+.hero-section {
+    display: flex;
+    align-items: center;
+    width: 1400px;
+    gap: 200px;
+    padding: 80px 60px;
+    background: #fff;
+    font-family: 'Poppins', sans-serif;
+}
+
+.hero-content {
+    max-width: 600px;
+}
+
+.hero-content h1 {
+    font-size: 48px;
+    font-weight: 700;
+    color: #111;
+    line-height: 1.3;
+    text-align: left;
+}
+
+.hero-content .highlight {
+    color: var(--Primary-color);
+}
+
+
+.highlight {
+    color: var(--Primary-color);
+}
+
+h1 {
+    font-size: 2rem;
+    line-height: 1.5;
+    text-align: center;
+}
+
+.highlight {
+    color: var(--Primary-color);
+    border-right: 2px solid var(--Primary-color);
+    padding-right: 4px;
+    white-space: nowrap;
+    overflow: hidden;
+    animation: blink 0.7s step-end infinite;
+}
+
+@keyframes blink {
+
+    0%,
+    100% {
+        border-color: var(--Primary-color);
+    }
+
+    50% {
+        border-color: transparent;
+    }
+}
+
+.features {
+    display: flex;
+    gap: 12px;
+    margin: 20px 0;
+    font-weight: 500;
+    color: var(--Primary-color);
+}
+
+.hero-content p {
+    color: #444;
+    margin-bottom: 30px;
+    line-height: 1.8;
+}
+
+.brand {
+    color: var(--Primary-color);
+}
+
+.email-subscribe {
+    display: flex;
+    width: 100%;
+    background: #f1f3f5;
+    border-radius: 50px;
+    overflow: hidden;
+    justify-content:center;
+}
+
+.email-subscribe input {
+    flex: 1;
+    border: none;
+    padding: 16px 24px;
+    background: transparent;
+    outline: none;
+    font-size: 16px;
+}
+
+.email-subscribe button {
+    background: var(--Primary-color);
+    border: none;
+    color: #fff;
+    padding: 16px 28px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.hero-image {
+    position: relative;
+}
+
+.badges {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    transform: translate(80px, -20px);
+}
+
+// .badge img {
+//     width: 60px;
+// }
+
+// .badge {
+//     background: #f8f9fa;
+//     border-radius: 12px;
+//     padding: 12px 20px;
+//     box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
+//     font-size: 14px;
+//     max-width: 200px;
+//     display: flex;
+//     gap: 10px;
+//   font-weight: bold;
+// }
+
+// .badge.ts {
+//     background-color: var(--Card-backgroud);
+//     position: absolute;
+//     left: -430px;
+// }
+
+// .badge.lex {
+//     background-color: var(--Card-backgroud);
+//     position: absolute;
+//     top: 230px;
+//     left: -500px;
+// }
+
+// .badge.saral {
+//     background-color: var(--Card-backgroud);
+//     position: absolute;
+//     bottom: -465px;
+//     left: -430px;
+// }
+
+// .badge.topclass {
+//     background-color: var(--Card-background2);
+//     position: absolute;
+//     bottom: -496px;
+//     left: -80px;
+// }
+
+// .badge.users {
+//     background-color: var(--Card-background2);
+//     bottom: -503px;
+//     width: 150px;
+//  justify-content: center;
+
+// }
+
+
+
+
+// .line {
+//     display: block;
+//     width: 1px;
+//     height: 100%;
+//     background: var(--Primary-color);
+//     position: absolute;
+//     left: 100px;
+//     top: 50px;
+//     border-radius: 2px;
+// }
+//.badge.topclass {
+//    background-color: var(--Card-background2);
+//    position: absolute;
+//    bottom: -503px;
+//    left: -80px;
+//    padding: 12px 20px;
+//    display: flex;
+//    gap: 10px;
+//    align-items: center;
+//}
+
+/* New line style */
+// .badge.topclass .line {
+//     position: absolute;
+//     left: 50%;
+//     transform: translateX(-50%);
+//     top: -63px;
+//     width: 1px;
+//     height: 10px;
+//     /* length of the line */
+//     background: var(--Primary-color);
+//     border-radius: 2px;
+// }
+
+// .badge.users .line {
+//     position: absolute;
+//     left: 20%;
+//     transform: translateX(-50%);
+//     top: 103px;
+//     width: 1px;
+//     height: 63px;
+//     /* length of the line */
+//     background: var(--Primary-color);
+//     border-radius: 2px;
+// }
+// .badge .description p{
+//   font-size: 19px;
+
+// }
+
+
+
+// .tag {
+//     display: inline-block;
+//     font-size: 12px;
+//     font-weight: 600;
+//     padding: 2px 8px;
+//     border-radius: 6px;
+//     margin-bottom: 8px;
+//     text-transform: uppercase;
+// }
+
+// .elearning {
+//     background: #e0e7ff;
+//     color: #4f46e5;
+// }
+
+// .lifestyle {
+//     background: #d1fae5;
+//     color: #065f46;
+// }
+
+// .number {
+//     font-size: 20px;
+//     font-weight: 800;
+//     margin-top:35px;
+// }
+// .profile-section{
+//   display:flex;
+//   flex-direction:column;
+//   justify-content: center;
+// }
+// .profile-section p{
+//   margin: 0;
+// }
+
+// .profile-group{
+//   position: relative;
+// }
+
+// .profile-group .profile1, .profile-group .profile2, .profile-group .profile3{
+//   position: absolute;
+
+// }
+// .profile-group .profile1{
+
+
+// }
+
+// .profile-group .profile2{
+//   left: 20px;
+//   z-index: 10;
+// }
+
+// .profile-group .profile3{
+//   left: 40px;
+// }
+
+
+// .trophy {
+//     font-size: 24px;
+// }
+
+.image-container {
+    // background: #e6edff;
+    border-radius: 30px;
+    padding: 12px;
+    overflow: hidden;
+    width: 100%;
+}
+
+.image-container img {
+    height: 600px;
+    border-radius: 20px;
+    margin-top:40px
+}
+
+.badge.users .line {
+    animation: grow-line2 1s ease forwards;
+}
+
+.badge.topclass .line {
+    animation: grow-line 1s ease forwards;
+}
+
+@keyframes grow-line {
+    from {
+        height: 0;
+    }
+
+    to {
+        height: 63px;
+    }
+}
+
+/* Bottom to top */
+@keyframes grow-line2 {
+    from {
+        height: 0;
+        transform: translateX(-50%) translateY(63px);
+    }
+
+    to {
+        height: 70px;
+        transform: translateX(-50%) translateY(0);
+    }
+}
+
+// @media (max-width: 1024px) {
+//     .hero-section {
+//         flex-direction: column;
+//         padding: 40px 20px;
+//     }
+//   .image-container img{
+//     max-width:95vw;
+//   }
+
+
+//     .hero-content h1 {
+//         font-size: 30px;
+//         text-align: center;
+//     }
+
+//     .hero-image {
+//         margin-top: 40px;
+//     }
+
+//     .badges {
+//         transform: none;
+//         position: relative;
+//         flex-direction: row;
+//         flex-wrap: wrap;
+//         justify-content: center;
+//     }
+
+//     .badge {
+//         position: static;
+//     }
+
+//   .features{
+//     justify-content:center
+//   }
+//   .hero-content{
+//     text-align: center;
+//   }
+//   .email-section{
+//     display: flex;
+//     align-items: center;
+//     justify-content: center;
+//     text-align: center;
+//     width: 100%;
+//   }
+//   .badge.ts, .badge.lex, .badge.saral, .badge.topclass{
+//     position:static;
+//   }
+//   .badge.users .line, .badge.topclass .line{
+//     display:none
+//   }
+
+//   .image-container{
+//     display: flex;
+//     justify-content: center;
+//   }
+
+// }
+
+// .trophy-section{
+//   display: flex;
+//   flex-direction: column;
+//   align-items: center;
+//   justify-content: center;
+//   text-align: center;
+// }
+
+@media (min-width:600px) and (max-width:1200px) {
+    .hero-section{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        gap: 40px;
+        padding: 60px 40px;
+        margin-top: 100px;
+        align-items: center;
+        justify-content: center;
+    }
+    .hero-content{
+        width: 100%;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+    }
+    .hero-content h1{
+        text-align: center;
+    }
+    .hero-section .features{
+        justify-content: center;
+    }
+    .email-section{
+        display: flex;
+        width: 100%;
+        border-radius: 20px;
+        align-items: center;
+        justify-content: center;
+    }
+    .image-container{
+        width: 100%;
+    }
+    .image-container img{
+        height: 500px;
+    }
+}
+@media (max-width:580px) {
+    .hero-section{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        gap: 40px;
+
+        margin-top: 100px;
+        text-align: center;
+        justify-content: center;
+    }
+    .hero-content{
+        width: 100%;
+        text-align: center;
+    }
+    .hero-content h1{
+        font-size: var(--Heading-size);
+        text-align: center;
+        font-weight: bold;
+    }
+    .features{
+        justify-content: center;
+    }
+    .email-subscribe{
+        border-radius: 20px;
+        justify-content: center;
+    }
+    .email-subscribe input{
+        padding: 10px 12px;
+        font-size: var(--Mobile-body);
+    }
+    .email-subscribe button{
+        padding: 10px 12px;
+        font-weight: bold;
+    }
+    .hero-image{
+        display: flex;
+    }
+    .image-container{
+        width: 100%;
+        border-radius: 20px;
+        justify-content: center;
+    }
+    .image-container img{
+        height: 400px;
+
+    }
+}
+
